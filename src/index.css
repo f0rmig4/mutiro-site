@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mutirõ Design System - Territorial, Clean, Institutional */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 45 25% 97%;
+    --foreground: 200 25% 18%;
+
+    --card: 45 20% 99%;
+    --card-foreground: 200 25% 18%;
+
+    --popover: 45 20% 99%;
+    --popover-foreground: 200 25% 18%;
+
+    /* Primary - Vibrant Green #5aa068 */
+    --primary: 130 30% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Petrol Blue for data/tech */
+    --secondary: 195 50% 28%;
+    --secondary-foreground: 45 25% 97%;
+
+    /* Muted - Warm neutrals */
+    --muted: 45 15% 92%;
+    --muted-foreground: 200 15% 45%;
+
+    /* Accent - Lighter green for highlights */
+    --accent: 130 25% 92%;
+    --accent-foreground: 130 30% 40%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 15% 88%;
+    --input: 45 15% 88%;
+    --ring: 130 30% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --territory-green: 130 30% 50%;
+    --territory-green-light: 130 25% 92%;
+    --data-blue: 195 50% 28%;
+    --data-blue-light: 195 40% 92%;
+    --earth-brown: 30 25% 35%;
+    --forest-dark: 130 35% 30%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(130 30% 50%) 0%, hsl(130 35% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(45 20% 99%) 0%, hsl(45 15% 96%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(130 30% 50% / 0.9) 0%, hsla(130 35% 40% / 0.85) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsla(200 25% 18% / 0.05);
+    --shadow-md: 0 4px 12px hsla(200 25% 18% / 0.08);
+    --shadow-lg: 0 8px 24px hsla(200 25% 18% / 0.1);
+    --shadow-card: 0 2px 8px hsla(130 30% 50% / 0.06);
+
+    /* Sidebar */
+    --sidebar-background: 45 25% 97%;
+    --sidebar-foreground: 200 25% 18%;
+    --sidebar-primary: 130 30% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 130 25% 92%;
+    --sidebar-accent-foreground: 130 30% 40%;
+    --sidebar-border: 45 15% 88%;
+    --sidebar-ring: 130 30% 50%;
+  }
+
+  .dark {
+    --background: 200 25% 10%;
+    --foreground: 45 20% 95%;
+
+    --card: 200 25% 12%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 200 25% 12%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 145 40% 45%;
+    --primary-foreground: 200 25% 10%;
+
+    --secondary: 195 45% 40%;
+    --secondary-foreground: 45 20% 95%;
+
+    --muted: 200 20% 18%;
+    --muted-foreground: 45 15% 65%;
+
+    --accent: 152 30% 20%;
+    --accent-foreground: 145 40% 45%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 20%;
+    --input: 200 20% 20%;
+    --ring: 145 40% 45%;
+
+    --sidebar-background: 200 25% 10%;
+    --sidebar-foreground: 45 20% 95%;
+    --sidebar-primary: 145 40% 45%;
+    --sidebar-primary-foreground: 200 25% 10%;
+    --sidebar-accent: 152 30% 20%;
+    --sidebar-accent-foreground: 145 40% 45%;
+    --sidebar-border: 200 20% 20%;
+    --sidebar-ring: 145 40% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .text-gradient-brand {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .card-territory {
+    @apply bg-card rounded-xl border border-border;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .card-territory:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary-territory {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:opacity-90 hover:shadow-lg;
+  }
+
+  .btn-secondary-territory {
+    @apply bg-transparent text-primary border-2 border-primary px-6 py-3 rounded-lg font-medium;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-primary hover:text-primary-foreground;
+  }
+
+  /* Territory map pattern overlay */
+  .pattern-territory {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsla(152 45% 22% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsla(195 50% 28% / 0.03) 0%, transparent 50%);
+  }
+
+  /* Subtle grid pattern for data sections */
+  .pattern-data {
+    background-image: 
+      linear-gradient(hsla(195 50% 28% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(195 50% 28% / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
