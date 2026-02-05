@@ -76,7 +76,7 @@ const projectsData: Record<string, ProjectData> = {
       },
       solution: {
         title: "Solução Proposta",
-        content: "O Caminho do Fogo é uma plataforma que integra monitoramento por satélite, dados climáticos e informações de campo para antecipar riscos de incêndio, coordenar ações de prevenção e apoiar brigadas no combate. A ferramenta conecta brigadistas, proprietários rurais, órgãos ambientais e comunidades.",
+        content: "Criado pela Terrakrya e desenvolvido e mantido pelo Mutirõ, o Caminho do Fogo é uma plataforma que integra monitoramento por satélite, dados climáticos e informações de campo para antecipar riscos de incêndio, coordenar ações de prevenção e apoiar brigadas no combate. A ferramenta conecta brigadistas, proprietários rurais, órgãos ambientais e comunidades.",
       },
       technology: {
         title: "Tecnologia Utilizada",
@@ -98,8 +98,14 @@ const projectsData: Record<string, ProjectData> = {
         ],
       },
       partners: {
-        title: "Parceiros Envolvidos",
-        items: ["ICMBio", "IBAMA", "Brigadas de incêndio", "ONGs ambientais", "Produtores rurais"],
+        title: "Parceiros e Apoiadores",
+        items: [
+          "Terrakrya (criador do projeto)",
+          "IBAMA/Prevfogo",
+          "Corpo de Bombeiros",
+          "ONGs ambientais",
+          "Comunidades tradicionais",
+        ],
       },
     },
   },
