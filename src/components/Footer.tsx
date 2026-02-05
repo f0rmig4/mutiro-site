@@ -64,9 +64,10 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/60">
-              © {currentYear} Mutirõ. Todos os direitos reservados.
-            </p>
+            <div className="text-sm text-primary-foreground/60 text-center md:text-left">
+              <p>© {currentYear} Mutirõ. Todos os direitos reservados.</p>
+              <p className="mt-1">CNPJ: 46.468.860/0001-55</p>
+            </div>
             <p className="text-sm text-primary-foreground/60">
               Tecnologia aberta para impacto social
             </p>

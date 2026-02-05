@@ -236,12 +236,14 @@ const projectsData: Record<string, ProjectData> = {
         ],
       },
       partners: {
-        title: "Parceiros e Colaboradores",
+        title: "Parceiros e Apoiadores",
         items: [
+          "Centro de Competência em Software Livre (UFPA)",
+          "Laboratório de Estudos Avançados em Software (LAES/UFPA)",
+          "Rede Latino-Americana de Estudos em Vigilância, Tecnologia e Sociedade (LAVITS)",
+          "Derechos Digitales América Latina",
           "Iniciativa Educação Aberta",
           "Coletivo FARPA (Tecnologia Social)",
-          "Pesquisadores acadêmicos",
-          "Organizações da sociedade civil",
         ],
       },
     },
