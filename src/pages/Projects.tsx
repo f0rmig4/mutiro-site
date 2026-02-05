@@ -119,11 +119,11 @@ const Projects = () => {
               Nossos Projetos
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Soluções climáticas em ação
+              Tecnologia e inovação social
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Conheça os projetos que estamos desenvolvendo para proteger territórios, 
-              antecipar riscos e regenerar comunidades em todo o Brasil.
+              Conheça nossa rede de projetos que utilizam tecnologia para promover transformação social, 
+              preservação ambiental e desenvolvimento sustentável em diferentes frentes de atuação.
             </p>
           </motion.div>
         </section>
